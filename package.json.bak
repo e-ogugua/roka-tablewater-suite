@@ -7,19 +7,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "preview": "vercel preview",
-    "test": "jest",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "jest --coverage",
-    "lint": "next lint",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --fix",
-    "type-check": "tsc --noEmit",
-    "start": "next start",
-    "test:watch": "jest --watch",
-    "deploy:staging": "vercel --prod",
-    "deploy:production": "vercel --prod --confirm"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",
